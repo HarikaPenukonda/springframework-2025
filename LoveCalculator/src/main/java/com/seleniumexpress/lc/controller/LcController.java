@@ -10,17 +10,20 @@ public class LcController {
 	
 	@RequestMapping("/")
 	public String getHomePage() {
+		
+		// read the default values from UserInfoDTO
+		
 		return "home-page";
 	}
 	
 	@RequestMapping("/processhome")
 	public String processHomePage(UserInfoDTO userInfoDTO,Model model) {
+		
+		// writing the value to the properties by fetching from the url
+		
 		System.out.println("username : " + userInfoDTO.getUserName());
 		System.out.println("crushName : " + userInfoDTO.getCrushName());
 		model.addAttribute("userInfo", userInfoDTO);
-//		System.out.println("UserName is : " + userName + " and CrushName is : " + crushName);
-//		model.addAttribute("userName", userName);
-//		model.addAttribute("crushName", crushName);
 		return "process-home";
 	}
 
