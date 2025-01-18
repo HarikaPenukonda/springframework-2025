@@ -30,10 +30,10 @@
 	<form action="processhome" method="get">
 		<div align= "center">
 			<label class = "l" for="un" value="Your Name">Your Name</label>
-			<input type="text" id="un" name="username">
+			<input type="text" id="un" name="userName"/>
 			
 			<label class = "l" for="cn">Crush Name</label>
-			<input type="text" id="cn" name="crushname">
+			<input type="text" id="cn" name="crushName"/>
 			
 			<input class="s" type="submit" value=calculate>
 		</div>

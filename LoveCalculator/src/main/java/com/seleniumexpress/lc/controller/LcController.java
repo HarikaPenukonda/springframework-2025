@@ -13,7 +13,8 @@ public class LcController {
 	}
 	
 	@RequestMapping("/processhome")
-	public String processHomePage(@RequestParam String userName, @RequestParam String crushName) {
+	public String processHomePage(@RequestParam("userName") String userName, @RequestParam("crushName") String crushName) {
+		System.out.println("UserName is : " + userName + " CrushName is : " + crushName);
 		return "process-home";
 	}
 
