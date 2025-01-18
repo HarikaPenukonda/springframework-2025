@@ -2,6 +2,7 @@ package com.seleniumexpress.lc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LcController {
@@ -12,7 +13,7 @@ public class LcController {
 	}
 	
 	@RequestMapping("/processhome")
-	public String processHomePage() {
+	public String processHomePage(@RequestParam String userName, @RequestParam String crushName) {
 		return "process-home";
 	}
 
