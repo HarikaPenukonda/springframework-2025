@@ -16,8 +16,9 @@ public class LoveCalculatorApplicationInitializer implements WebApplicationIniti
 		XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
 		webApplicationContext.setConfigLocation("classpath:application-config.xml");
 		
+		
 		// create dispatcher servlet
-		DispatcherServlet dispatcherServlet = new DispatcherServlet();
+		DispatcherServlet dispatcherServlet = new DispatcherServlet(webApplicationContext);
 		
 		// register dispatcher servlet with servlet context
 		ServletRegistration.Dynamic customServlet =  servletContext.addServlet("myDispatcherServlet", dispatcherServlet);
