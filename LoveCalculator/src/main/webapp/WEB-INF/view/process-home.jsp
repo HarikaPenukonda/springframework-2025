@@ -10,5 +10,7 @@
 	<body class="a" align="center">
 	<h1 class="hd">Love Calculator</h1>
 	<hr>
+	<p>User Name : ${userName}</p>
+	<p>Crush Name : ${crushName}</p>
 </body>
 </html>
