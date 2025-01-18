@@ -2,9 +2,9 @@ package com.seleniumexpress.lc.api;
 
 public class UserInfoDTO {
 	
-	private String userName;
+	private String userName = "Mr.X";
 	
-	private String crushName;
+	private String crushName = "Ms.Y";
 	
 	public UserInfoDTO() {
 		System.out.println("UserInfoDTO constructor is called...");
