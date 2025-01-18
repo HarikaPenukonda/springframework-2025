@@ -9,9 +9,11 @@ import com.seleniumexpress.lc.api.UserInfoDTO;
 public class LcController {
 	
 	@RequestMapping("/")
-	public String getHomePage() {
+	public String getHomePage(Model model) {
 		
 		// read the default values from UserInfoDTO
+		UserInfoDTO userInfo = new UserInfoDTO();
+		model.addAttribute("userInfo", userInfo);
 		
 		return "home-page";
 	}
