@@ -1,7 +1,7 @@
 package com.seleniumexpress.lc.config;
 
 import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.support.XmlWebApplicationContext;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
 import jakarta.servlet.ServletContext;
@@ -13,8 +13,11 @@ public class LoveCalculatorApplicationInitializer implements WebApplicationIniti
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		
-		XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
-		webApplicationContext.setConfigLocation("classpath:application-config.xml");
+//		XmlWebApplicationContext webApplicationContext = new XmlWebApplicationContext();
+//		webApplicationContext.setConfigLocation("classpath:application-config.xml");
+		
+		AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext();
+		webApplicationContext.register(LoveCalculatorAppConfig.class);
 		
 		
 		// create dispatcher servlet
