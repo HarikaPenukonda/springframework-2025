@@ -15,12 +15,12 @@ public class LCAppConfig extends AbstractAnnotationConfigDispatcherServletInitia
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		Class arr[] = {LoveCalculatorAppConfig.class};
-		return null;
+		return arr;
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		String arr[] = {"/website.com/*"};
+		String arr[] = {"/"};
 		return arr;
 	}
 
