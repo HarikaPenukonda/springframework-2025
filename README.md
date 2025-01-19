@@ -17,6 +17,7 @@ Handles requests based on the URL, HTTP method, headers, and more.
 15. ResponseBody - Spring annotation that tells the framework to send the method's return value directly in the HTTP response body, instead of rendering a view (like a JSP or HTML page). Converts the return value to a web-friendly format (like JSON, XML, or plain text).
 Commonly used for building RESTful APIs where data is sent instead of web pages.
 16. RequestParam - helps us to bind our form parameters to variables.
+17. ModelAttribute - It helps in binding HTTP request parameters (such as form fields) to a Java object. Method-level: Can be used on a method to add an attribute to the model that will be available to all handler methods.Parameter-level: Can be used on a method parameter to automatically bind form data to a Java object.
 
 ## Spring-MVC
 1. What is the role of the DispatcherServlet in Spring MVC?
