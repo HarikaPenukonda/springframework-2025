@@ -1,8 +1,11 @@
 package com.seleniumexpress.lc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.seleniumexpress.lc.api.UserInfoDTO;
 
 @Controller
@@ -15,12 +18,6 @@ public class LcController {
 	
 	@RequestMapping("/processhome")
 	public String processHomePage(@ModelAttribute("userInfo") UserInfoDTO userInfoDTO) {
-		
-		// writing the value to the properties by fetching from the url
-		
-//		System.out.println("username : " + userInfoDTO.getUserName());
-//		System.out.println("crushName : " + userInfoDTO.getCrushName());
-//		model.addAttribute("userInfo", userInfoDTO);
 		return "process-home";
 	}
 
