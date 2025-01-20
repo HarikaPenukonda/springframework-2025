@@ -47,17 +47,17 @@
 		<br>
 		<div>
 			<label>Hobbies :</label>
-			Coding <form:checkbox path="hobbies" value="code"/>
-			Travelling <form:checkbox path="hobbies" value="tr"/>
-			Reading <form:checkbox path="hobbies" value="read"/>
-			Vlogging <form:checkbox path="hobbies" value="vlog"/>
-			Gaming <form:checkbox path="hobbies" value="game"/>
+			Coding <form:checkbox path="hobbies" value="Coding"/>
+			Travelling <form:checkbox path="hobbies" value="Travelling"/>
+			Reading <form:checkbox path="hobbies" value="Reading"/>
+			Vlogging <form:checkbox path="hobbies" value="Vlogging"/>
+			Gaming <form:checkbox path="hobbies" value="Gaming"/>
 		</div>
 		<br>
 		<div>
 			<label>Gender : </label>
-			Male<form:radiobutton path="gender" value="m"/>
-			Female<form:radiobutton path="gender" value="f"/>
+			Male<form:radiobutton path="gender" value="Male"/>
+			Female<form:radiobutton path="gender" value="Female"/>
 		</div>
 		<br>
 		

@@ -24,7 +24,8 @@
 	<h4>
 	
 		Hobbies : 
-		<c:forEach var=temp items=${userReg.hobbies}>
+		
+		<c:forEach var="temp" items="${userReg.hobbies}">
 			${temp}
 		</c:forEach>
 	
