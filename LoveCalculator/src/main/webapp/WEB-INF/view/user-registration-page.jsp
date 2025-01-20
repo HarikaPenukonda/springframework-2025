@@ -17,7 +17,7 @@
 </head>
 <body class="bd" align="center">
 	<h3 class="a"> Register Here </h3>
-	<form:form modelAttribute="userInfo">
+	<form:form action="register-success" method="get" modelAttribute="userInfo">
 		<div>
 			<label>Full Name</label>
 			<form:input path="fullName"/>

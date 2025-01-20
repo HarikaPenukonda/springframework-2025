@@ -21,7 +21,14 @@
 	<h4>User Name : ${userReg.userName}</h4>
 	<h4>Password : ${userReg.password}</h4>
 	<h4>Country : ${userReg.country}</h4>
-	<h4>Hobbies : ${userReg.hobbies}</h4>
+	<h4>
+	
+		Hobbies : 
+		<c:forEach var=temp items=${userReg.hobbies}>
+			${temp}
+		</c:forEach>
+	
+	</h4>
 	<h4>Gender : ${userReg.gender}</h4>
 	
 </body>
