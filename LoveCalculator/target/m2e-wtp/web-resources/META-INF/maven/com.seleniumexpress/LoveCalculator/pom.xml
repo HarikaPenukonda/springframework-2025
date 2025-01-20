@@ -58,6 +58,12 @@
 	    <version>6.0.0</version>
 	    <scope>provided</scope>
 	</dependency>
+	
+	<dependency>
+	    <groupId>jakarta.validation</groupId>
+	    <artifactId>jakarta.validation-api</artifactId>
+	    <version>3.1.0</version>
+	</dependency>
     
   </dependencies>
 
