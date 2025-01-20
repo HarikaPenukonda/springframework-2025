@@ -1,10 +1,13 @@
 package com.seleniumexpress.lc.api;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class UserInfoDTO {
 	
-	private String userName = "Mr.X";
+	@NotBlank(message = "username should not be blank")
+	private String userName;
 	
-	private String crushName = "Ms.Y";
+	private String crushName;
 	
 	public UserInfoDTO() {
 		System.out.println("UserInfoDTO constructor is called...");
