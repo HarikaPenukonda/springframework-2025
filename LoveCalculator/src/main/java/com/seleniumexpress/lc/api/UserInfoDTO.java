@@ -1,10 +1,12 @@
 package com.seleniumexpress.lc.api;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 
 public class UserInfoDTO {
 	
-	@NotBlank(message = "username should not be blank")
+	@NotBlank(message = " * username should not be blank")
+	@Min(value = 2, message = "* username should be atleast 3 letters")
 	private String userName;
 	
 	private String crushName;

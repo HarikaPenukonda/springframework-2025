@@ -1,7 +1,10 @@
 package com.seleniumexpress.lc.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,6 +26,13 @@ public class LcController {
 	{	
 		if(result.hasErrors()) {
 			System.out.println("Form has errors");
+			List<ObjectError> allErrors = result.getAllErrors();
+			System.out.println(allErrors);
+			// Field error in object 'userInfo' on field 'userName': rejected value []; 
+			// codes [NotBlank.userInfo.userName,NotBlank.userName,NotBlank.java.lang.String,NotBlank]; 
+			// arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.userName,userName]; 
+			// arguments []; default message [userName]]; default message [username should not be blank]]
+			return "home-page";
 		}
 		
 		/*

@@ -21,6 +21,10 @@
 		color: red;
 		border-color: red;
 	}
+	.err{
+		color: red;
+		font-style: italic;
+	}
 </style>
 <meta charset="UTF-8">
 <title>Love Calculator</title>
@@ -29,15 +33,22 @@
 	<h1 class="hd">Love Calculator</h1>
 	<hr>
 	<form:form action="processhome" method="get" modelAttribute="userInfo">
-		<div align= "center">
+		<div>
 			<label class = "l" for="un" value="Your Name">Your Name</label>
 			<form:input id="un" path="userName"></form:input>
-			
+			<div>
+				<form:errors class="err" path="userName"></form:errors>
+			</div>
+			<br>
+		</div>
+		<br>
+		<div>
 			<label class = "l" for="cn">Crush Name</label>
 			<form:input id="cn" path="crushName"/>
-			
-			<input class="s" type="submit" value=calculate>
 		</div>
+		<br>	
+			<input class="s" type="submit" value=calculate>
+		
 		
 	</form:form>
 </body>
