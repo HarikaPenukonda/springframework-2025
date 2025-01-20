@@ -25,7 +25,8 @@
 		color: red;
 		font-style: italic;
 		position: fixed;
-		text-align: left
+		text-align: left;
+	
 	}
 </style>
 <meta charset="UTF-8">
@@ -47,6 +48,16 @@
 		<div>
 			<label class = "l" for="cn">Crush Name</label>
 			<form:input id="cn" path="crushName"/>
+		</div>
+		<br>
+		<div>
+			
+			<form:checkbox path="termsAndConditions"/>
+			<label>I have read the terms and conditions</label>
+			<div>
+				<form:errors class="err" path="termsAndConditions"></form:errors>
+			</div>
+			
 		</div>
 		<br>	
 			<input class="s" type="submit" value=calculate>

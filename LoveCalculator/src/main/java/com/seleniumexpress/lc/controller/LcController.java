@@ -24,6 +24,8 @@ public class LcController {
 	@RequestMapping("/processhome")
 	public String processHomePage(@Valid @ModelAttribute("userInfo") UserInfoDTO userInfoDTO, BindingResult result) 
 	{	
+		//System.out.println(userInfoDTO.isTermsAndConditions());
+		
 		if(result.hasErrors()) {
 			System.out.println("Form has errors");
 			List<ObjectError> allErrors = result.getAllErrors();
