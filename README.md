@@ -18,6 +18,7 @@ Handles requests based on the URL, HTTP method, headers, and more.
 Commonly used for building RESTful APIs where data is sent instead of web pages.
 16. RequestParam - helps us to bind our form parameters to variables.
 17. ModelAttribute - It helps in binding HTTP request parameters (such as form fields) to a Java object. Method-level: Can be used on a method to add an attribute to the model that will be available to all handler methods.Parameter-level: Can be used on a method parameter to automatically bind form data to a Java object.
+18. Valid - the @Valid annotation is used to trigger validation for a bean or object based on the constraints defined in the bean's class. It is part of the BeanValidation API (JSR 303 and JSR 380).
 
 ## Spring-MVC
 1. What is the role of the DispatcherServlet in Spring MVC?
