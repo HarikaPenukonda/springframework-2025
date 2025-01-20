@@ -24,6 +24,8 @@
 	.err{
 		color: red;
 		font-style: italic;
+		position: fixed;
+		text-align: left
 	}
 </style>
 <meta charset="UTF-8">
