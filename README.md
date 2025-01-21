@@ -1,3 +1,12 @@
+## FAQ
+1. What is a Formatter and Why it is required?
+   - A formatter is a component or utility in programming used to convert an object or data into a specific, readable, or required format, and vice versa.
+   - It ensures that data is displayed, inputted, or stored in a consistent and expected format, which is particularly important in user interfaces, APIs, or when dealing with data exchange between systems.
+  
+2. Explain Binding Result?
+  - In the context of Spring MVC, BindingResult is an interface used to capture and manage the result of validation.
+  -  It holds the outcome of binding input data to an object and provides access to validation errors if any constraints are violated.
+
 ## Annotations
 1. Components - create the object and registers that object in Spring IOC container
 2. ComponentScan - Scans the base packages and if Component annotation is found it creates and registers the object in the IOC container
