@@ -14,6 +14,8 @@ public class UserRegistrationDTO {
 	
 	private String gender;
 	
+	private CommunicationDTO communicationDTO;
+	
 	public String getGender() {
 		return gender;
 	}
@@ -61,6 +63,15 @@ public class UserRegistrationDTO {
 	public void setPassword(char[] password) {
 		this.password = password;
 	}
+
+	public CommunicationDTO getCommunicationDTO() {
+		return communicationDTO;
+	}
+
+	public void setCommunicationDTO(CommunicationDTO communicationDTO) {
+		this.communicationDTO = communicationDTO;
+	}
+	
 	
 	
 

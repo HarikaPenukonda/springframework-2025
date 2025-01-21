@@ -31,6 +31,7 @@
 	
 	</h4>
 	<h4>Gender : ${userReg.gender}</h4>
-	
+	<br>
+	<h4>Email : ${userReg.communicationDTO.email}</h4>
 </body>
 </html>

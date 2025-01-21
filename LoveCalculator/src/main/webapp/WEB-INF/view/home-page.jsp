@@ -48,6 +48,10 @@
 		<div>
 			<label class = "l" for="cn">Crush Name</label>
 			<form:input id="cn" path="crushName"/>
+			<div>
+				<form:errors class="err" path="crushName"></form:errors>
+			</div>
+			<br>
 		</div>
 		<br>
 		<div>
