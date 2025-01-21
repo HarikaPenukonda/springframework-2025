@@ -20,6 +20,47 @@ Commonly used for building RESTful APIs where data is sent instead of web pages.
 17. ModelAttribute - It helps in binding HTTP request parameters (such as form fields) to a Java object. Method-level: Can be used on a method to add an attribute to the model that will be available to all handler methods.Parameter-level: Can be used on a method parameter to automatically bind form data to a Java object.
 18. Valid - the @Valid annotation is used to trigger validation for a bean or object based on the constraints defined in the bean's class. It is part of the BeanValidation API (JSR 303 and JSR 380).
 
+## Spring DataBinding
+1. What is data binding in the context of Spring MVC? Why is it important?
+
+2. How does Spring bind HTTP request parameters to method arguments in a controller?
+
+3. What is the purpose of the @ModelAttribute annotation? How does it assist in data binding?
+
+4. Explain how to use the @RequestParam annotation for binding query parameters or form data. Provide an example.
+
+5. What is the difference between @RequestParam and @PathVariable in data binding?
+
+6. How does Spring handle binding data to complex objects, such as a custom Java class?
+
+7. What is the purpose of the BindingResult interface in Spring MVC? How is it used?
+
+8. What happens if there is a type mismatch during data binding? How can you handle such errors?
+
+9. How can you configure custom property editors in Spring for specific data types?
+
+10. What is the role of the @InitBinder annotation in Spring MVC? Provide an example of its usage.
+
+11. Explain the use of @Validated or @Valid annotations in the context of data binding. How do they integrate with the BindingResult?
+
+12. How does Spring MVC handle form backing objects for binding and validation?
+
+13. What is the role of the ConversionService in data binding? How do you register custom converters?
+
+14. How can you handle date and time formatting during data binding in Spring MVC?
+
+15. What are default property editors provided by Spring, and when would you need to override them?
+
+16. How can you bind a list or a map from the request to a model attribute in Spring MVC?
+
+17. What is the purpose of the WebDataBinder class in Spring MVC?
+
+18. Explain how Spring Formatter differs from PropertyEditor in data binding.
+
+19. How can you customize error messages for binding and validation failures?
+
+20. What is the difference between server-side and client-side data binding in the context of a Spring application?
+
 ## Spring-MVC
 1. What is the role of the DispatcherServlet in Spring MVC?
 
