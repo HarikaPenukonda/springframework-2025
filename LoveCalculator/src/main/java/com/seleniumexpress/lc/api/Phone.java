@@ -21,6 +21,11 @@ public class Phone {
 	public void setUserNumber(String userNumber) {
 		this.userNumber = userNumber;
 	}
+
+	@Override
+	public String toString() {
+		return countryCode + "-" + userNumber;
+	}
 	
 	
 

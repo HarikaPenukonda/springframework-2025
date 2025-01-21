@@ -18,10 +18,12 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 	@Override
 	public Phone parse(String phoneNumber, Locale locale) throws ParseException {
 		
-		// split the string recieved from the user
+		System.out.println("<------inside the Parse method------>");
+		
+		// split the string received from the user
 		String[] phoneNumberArray = phoneNumber.split("-");
 		
-		// Extract the countrycode and set it to Phone class country code property
+		// Extract the country code and set it to Phone class country code property
 		Phone phone = new Phone();
 		phone.setCountryCode(phoneNumberArray[0]);
 		phone.setUserNumber(phoneNumberArray[1]);

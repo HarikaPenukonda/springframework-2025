@@ -12,6 +12,7 @@ public class RegistrationController {
 	
 	@RequestMapping("/register")
 	public String showRegistrationPage(Model model) {
+		System.out.println("<------inside the show registration page method------>");
 		UserRegistrationDTO dto = new UserRegistrationDTO();
 		model.addAttribute("userInfo", dto);
 		return "user-registration-page";
@@ -19,6 +20,7 @@ public class RegistrationController {
 	
 	@RequestMapping("/register-success")
 	public String registeredUserInfo(@ModelAttribute("userReg") UserRegistrationDTO userRegistrationDTO) {
+		System.out.println("<------inside the registered User information method------>");
 		return "register-user-info";
 	}
 
