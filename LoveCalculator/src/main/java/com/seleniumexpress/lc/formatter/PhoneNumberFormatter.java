@@ -11,14 +11,14 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 
 	@Override
 	public String print(Phone phone, Locale locale) {
-		System.out.println("<------inside the Print method------>");
+		System.out.println("<------inside the Print method of Parser Interfaceß------>");
 		return phone.getCountryCode() + "-" + phone.getUserNumber();
 	}
 
 	@Override
 	public Phone parse(String phoneNumber, Locale locale) throws ParseException {
 		
-		System.out.println("<------inside the Parse method------>");
+		System.out.println("<------inside the Parse method of Printer Interface------>");
 		
 		// split the string received from the user
 		String[] phoneNumberArray = phoneNumber.split("-");
