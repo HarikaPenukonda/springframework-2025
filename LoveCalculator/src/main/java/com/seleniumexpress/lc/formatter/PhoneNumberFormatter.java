@@ -30,7 +30,11 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 		if(index == -1) {
 			phone.setCountryCode("91");
 			phone.setUserNumber(phoneNumberArray[0]);
-		}else {
+		}else if(index == 0){
+			phone.setCountryCode("91");
+			phone.setUserNumber(phoneNumberArray[1]);
+		}
+		else{
 			
 			// Extract the country code and set it to Phone class country code property
 			phone.setCountryCode(phoneNumberArray[0]);
