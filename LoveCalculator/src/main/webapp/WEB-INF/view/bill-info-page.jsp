@@ -10,5 +10,6 @@
 	<h3>Payment successful</h3>
 	<br>
 	<h4>Your Full Name : ${billInfo.userName}</h4>
+	<h4>Credit Card Number : ${billInfo.creditCard}</h4>
 </body>
 </html>

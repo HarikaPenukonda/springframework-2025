@@ -60,7 +60,16 @@
 			Female<form:radiobutton path="gender" value="Female"/>
 		</div>
 		<br>
-		
+		<div>
+			<h4>Contact Us</h4>
+			<label>Email</label>
+			<form:input path="communicationDTO.email"/> <!-- Nested Object example - getCommunicationDTO().getEmail() -->
+		</div>
+		<br>
+		<label>Phone</label>
+			<form:input path="communicationDTO.phone"/>
+		</div>
+		<br>
 		<input type="submit" value="register">
 	</form:form>
 	 <div class="form-footer">

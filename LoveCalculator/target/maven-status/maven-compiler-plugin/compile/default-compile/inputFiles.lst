@@ -1,8 +1,15 @@
+/Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/api/BillDTO.java
+/Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/api/CommunicationDTO.java
+/Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/api/CreditCard.java
+/Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/api/Phone.java
 /Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/api/UserInfoDTO.java
 /Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/api/UserRegistrationDTO.java
 /Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/config/LCAppConfig.java
 /Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/config/LoveCalculatorAppConfig.java
 /Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/config/LoveCalculatorApplicationInitializer.java
+/Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/controller/BillController.java
 /Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/controller/LcController.java
 /Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/controller/RegistrationController.java
 /Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/controller/TestController.java
+/Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/formatter/CreditCardFormatter.java
+/Users/matthewhinthorn/git/springframework-2025/LoveCalculator/src/main/java/com/seleniumexpress/lc/formatter/PhoneNumberFormatter.java

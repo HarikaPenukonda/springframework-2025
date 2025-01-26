@@ -2,51 +2,52 @@ package com.seleniumexpress.lc.api;
 
 public class CreditCard {
 	
-	private Integer FirstFourDigits;
+	private Integer firstFourDigits = 1234;
 	
-	private Integer SecoundFourDigits;
+	private Integer secoundFourDigits = 1234;
 	
-	private Integer ThirdFourDigits;
+	private Integer thirdFourDigits = 1234;
 	
-	private Integer FourthFourDigits;
+	private Integer fourthFourDigits = 1234;
 
 	public Integer getFirstFourDigits() {
-		return FirstFourDigits;
+		return firstFourDigits;
 	}
 
 	public void setFirstFourDigits(Integer firstFourDigits) {
-		FirstFourDigits = firstFourDigits;
+		this.firstFourDigits = firstFourDigits;
 	}
 
 	public Integer getSecoundFourDigits() {
-		return SecoundFourDigits;
+		return secoundFourDigits;
 	}
 
 	public void setSecoundFourDigits(Integer secoundFourDigits) {
-		SecoundFourDigits = secoundFourDigits;
+		this.secoundFourDigits = secoundFourDigits;
 	}
 
 	public Integer getThirdFourDigits() {
-		return ThirdFourDigits;
+		return thirdFourDigits;
 	}
 
 	public void setThirdFourDigits(Integer thirdFourDigits) {
-		ThirdFourDigits = thirdFourDigits;
+		this.thirdFourDigits = thirdFourDigits;
 	}
 
 	public Integer getFourthFourDigits() {
-		return FourthFourDigits;
+		return fourthFourDigits;
 	}
 
 	public void setFourthFourDigits(Integer fourthFourDigits) {
-		FourthFourDigits = fourthFourDigits;
+		this.fourthFourDigits = fourthFourDigits;
 	}
 
 	@Override
 	public String toString() {
-		return FirstFourDigits + "-" + SecoundFourDigits
-				+ "-" + ThirdFourDigits + "-" + FourthFourDigits;
+		return firstFourDigits + "-" + secoundFourDigits
+				+ "-" + thirdFourDigits + "-" + fourthFourDigits;
 	}
+	
 	
 	
 
