@@ -5,6 +5,8 @@ public class BillDTO {
 	private String userName;
 	
 	private CreditCard creditCard;
+	
+	private Amount amount;
 
 	public String getUserName() {
 		return userName;
