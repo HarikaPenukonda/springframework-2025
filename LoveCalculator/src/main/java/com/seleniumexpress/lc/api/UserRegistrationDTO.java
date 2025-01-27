@@ -14,6 +14,8 @@ public class UserRegistrationDTO {
 	
 	private String gender;
 	
+	private Integer age;
+	
 	private CommunicationDTO communicationDTO;
 	
 	public String getGender() {
@@ -70,6 +72,14 @@ public class UserRegistrationDTO {
 
 	public void setCommunicationDTO(CommunicationDTO communicationDTO) {
 		this.communicationDTO = communicationDTO;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 	
 	

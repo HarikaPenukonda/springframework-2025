@@ -61,6 +61,10 @@
 		</div>
 		<br>
 		<div>
+			<label>Age : </label>
+			<form:input path="age"/>
+		</div>
+		<div>
 			<h4>Contact Us</h4>
 			<label>Email</label>
 			<form:input path="communicationDTO.email"/> <!-- Nested Object example - getCommunicationDTO().getEmail() -->
