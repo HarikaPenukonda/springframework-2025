@@ -11,6 +11,13 @@
 	.a{
 		color: Red
 	}
+	.err{
+		color: red;
+		font-style: italic;
+		position: fixed;
+		text-align: left;
+	
+	}
 </style>
 <meta charset="UTF-8">
 <title>Registration Page</title>
@@ -63,6 +70,7 @@
 		<div>
 			<label>Age : </label>
 			<form:input path="age"/>
+			<form:errors class="err" path="age"/>
 		</div>
 		<div>
 			<h4>Contact Us</h4>
