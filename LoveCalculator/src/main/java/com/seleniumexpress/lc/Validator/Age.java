@@ -7,6 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 import jakarta.validation.Constraint;
+import jakarta.validation.Payload;
 
 @Constraint(validatedBy = AgeValidatorConstraint.class)
 @Documented
@@ -19,5 +20,9 @@ public @interface Age {
 	int upper() default 60;
 	
 	String message() default "valid age is between 18-60";
+	
+	Class<?>[] groups() default { };
+
+	Class<? extends Payload>[] payload() default { };
 
 }
