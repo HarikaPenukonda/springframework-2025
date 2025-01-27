@@ -24,7 +24,7 @@
 </head>
 <body class="bd" align="center">
 	<h3 class="a"> Register Here </h3>
-	<form:form action="register-success" method="get" modelAttribute="userInfo">
+	<form:form action="register-success" method="get" modelAttribute="userReg">
 		<div>
 			<label>Full Name</label>
 			<form:input path="fullName"/>
@@ -70,7 +70,9 @@
 		<div>
 			<label>Age : </label>
 			<form:input path="age"/>
-			<form:errors class="err" path="age"/>
+			<div>
+			<form:errors class="err" path="age"></form:errors>
+			</div>
 		</div>
 		<div>
 			<h4>Contact Us</h4>

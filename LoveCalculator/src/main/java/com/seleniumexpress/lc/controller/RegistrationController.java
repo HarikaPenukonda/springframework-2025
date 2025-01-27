@@ -19,7 +19,7 @@ import jakarta.validation.Valid;
 public class RegistrationController {
 	
 	@RequestMapping("/register")
-	public String showRegistrationPage(@ModelAttribute("userInfo") UserRegistrationDTO userRegistrationDTO) {
+	public String showRegistrationPage(@ModelAttribute("userReg") UserRegistrationDTO userRegistrationDTO) {
 		System.out.println("<------inside the show registration page method------>");
 		
 		// load the saved user from the database(example) for now will do manually
@@ -48,6 +48,7 @@ public class RegistrationController {
 			for (ObjectError objectError : allErrors) {
 				System.out.println(objectError);
 			}
+			return "user-registration-page";
 		}
 		return "register-user-info";
 	}
