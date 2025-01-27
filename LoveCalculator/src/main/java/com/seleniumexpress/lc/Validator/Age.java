@@ -19,7 +19,7 @@ public @interface Age {
 	
 	int upper() default 60;
 	
-	String message() default "{Age.userReg.age}";
+	String message() default "{invalidAgeMessage}";
 	
 	Class<?>[] groups() default { };
 
