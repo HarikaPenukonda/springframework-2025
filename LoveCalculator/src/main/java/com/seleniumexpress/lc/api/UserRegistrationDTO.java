@@ -16,7 +16,7 @@ public class UserRegistrationDTO {
 	
 	private String gender;
 	
-	@Age(lower = 18, upper = 60, message = " * xThe ages should be between 18 - 60 only")
+	@Age(lower = 30, upper = 75, message = " * The ages should be between 30 - 75 only")
 	private Integer age;
 	
 	private CommunicationDTO communicationDTO;
