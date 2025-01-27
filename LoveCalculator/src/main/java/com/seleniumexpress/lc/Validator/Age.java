@@ -19,7 +19,7 @@ public @interface Age {
 	
 	int upper() default 60;
 	
-	String message() default "valid age is between 18-60";
+	String message() default "valid age is between {lower} - {upper}";
 	
 	Class<?>[] groups() default { };
 
