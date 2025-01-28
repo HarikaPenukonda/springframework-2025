@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -34,23 +35,42 @@ public class RegistrationController {
 		//userRegistrationDTO.getCommunicationDTO().setPhone(phone);
 		
 		userRegistrationDTO.setCommunicationDTO(communicationDTO);
-		
-		
+
 		return "user-registration-page";
+		
 	}
 	
 	@RequestMapping("/register-success")
 	public String registeredUserInfo(@Valid @ModelAttribute("userReg") UserRegistrationDTO userRegistrationDTO , BindingResult result) {
 		System.out.println("<------inside the registered User information method------>");
+		
 		if(result.hasErrors()) {
 			System.out.println("<------Page has errors------>");
 			List<ObjectError> allErrors = result.getAllErrors();
-			for (ObjectError objectError : allErrors) {
-				System.out.println(objectError);
-			}
+			System.out.println(allErrors);
 			return "user-registration-page";
 		}
 		return "register-user-info";
 	}
+	
+	@InitBinder
+	public void initBinder() {
+		System.out.println("<------inside the initBinder method------>");
+	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
