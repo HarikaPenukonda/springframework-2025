@@ -35,6 +35,7 @@
 		<div>
 			<label>User Name</label>
 			<form:input path="userName"/>
+			<form:errors class="err" path="userName"/>
 		</div>
 		<br>
 		<div>

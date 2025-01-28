@@ -2,8 +2,8 @@ package com.seleniumexpress.lc.controller;
 
 import java.util.List;
 
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.WebDataBinder;
@@ -57,7 +57,10 @@ public class RegistrationController {
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
 		System.out.println("<------inside the initBinder method------>");
-		binder.setDisallowedFields("userName");
+		//binder.setDisallowedFields("userName");
+		// inbuit class to trim white spaces
+		StringTrimmerEditor editor = new StringTrimmerEditor(true);
+		binder.registerCustomEditor(String.class, "userName", editor);
 	}
 
 }

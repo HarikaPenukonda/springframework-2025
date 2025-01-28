@@ -4,6 +4,7 @@ import com.seleniumexpress.lc.Validator.Age;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
 public class UserRegistrationDTO {
@@ -12,6 +13,7 @@ public class UserRegistrationDTO {
 	@Size(min = 3, max = 15, message = "* your name should be between 3 - 15 characters")
 	private String fullName;
 	
+	@NotEmpty(message = " * username cannot be empty")
 	private String userName;
 	
 	private char[] password;
