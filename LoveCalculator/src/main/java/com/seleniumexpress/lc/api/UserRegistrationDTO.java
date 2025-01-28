@@ -2,8 +2,14 @@ package com.seleniumexpress.lc.api;
 
 import com.seleniumexpress.lc.Validator.Age;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class UserRegistrationDTO {
 	
+	@NotBlank(message = " * your name should not be blank")
+	@Size(min = 3, max = 15, message = "* your name should be between 3 - 15 characters")
 	private String fullName;
 	
 	private String userName;
@@ -16,9 +22,10 @@ public class UserRegistrationDTO {
 	
 	private String gender;
 	
-	@Age(lower = 30, upper = 75)
+	@Age(lower = 30, upper = 75, message=" your age should be between 30 - 75 ")
 	private Integer age;
 	
+	@Valid
 	private CommunicationDTO communicationDTO;
 	
 	public String getGender() {

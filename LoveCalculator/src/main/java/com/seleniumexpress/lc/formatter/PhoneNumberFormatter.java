@@ -23,6 +23,10 @@ public class PhoneNumberFormatter implements Formatter<Phone>{
 		
 		// split the string received from the user
 		String[] phoneNumberArray = phoneNumber.split("-");
+		
+		// Extract the country code and set it to Phone class country code property
+		phone.setCountryCode(phoneNumberArray[0]);
+ 		phone.setUserNumber(phoneNumberArray[1]);
 				
 		
 		// check whether the phone number consists of "-"

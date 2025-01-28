@@ -35,5 +35,6 @@
 	<br>
 	<h4>Email : ${userReg.communicationDTO.email}</h4>
 	<h4>Phone : ${userReg.communicationDTO.phone}</h4>
+	
 </body>
 </html>

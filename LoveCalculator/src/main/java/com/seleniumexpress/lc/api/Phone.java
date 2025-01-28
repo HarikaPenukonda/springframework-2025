@@ -1,9 +1,13 @@
 package com.seleniumexpress.lc.api;
 
+import com.seleniumexpress.lc.Validator.PhoneValidator;
+
 public class Phone {
+	
 	
 	private String countryCode;
 	
+	@PhoneValidator
 	private String userNumber;
 
 	public String getCountryCode() {

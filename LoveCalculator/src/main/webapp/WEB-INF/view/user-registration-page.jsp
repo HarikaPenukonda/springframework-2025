@@ -26,8 +26,9 @@
 	<h3 class="a"> Register Here </h3>
 	<form:form action="register-success" method="get" modelAttribute="userReg">
 		<div>
-			<label>Full Name</label>
-			<form:input path="fullName"/>
+			<label for="fn">Full Name</label>
+			<form:input id="fn" path="fullName"/>
+			<form:errors class="err" path="fullName"/>
 		</div>
 		
 		<br>
@@ -80,8 +81,10 @@
 			<form:input path="communicationDTO.email"/> <!-- Nested Object example - getCommunicationDTO().getEmail() -->
 		</div>
 		<br>
-		<label>Phone</label>
-			<form:input path="communicationDTO.phone"/>
+		<div>
+		<label for="ph">Phone</label>
+			<form:input id="ph" path="communicationDTO.phone"/>
+			<form:errors class="err" path="communicationDTO.phone.userNumber"/>
 		</div>
 		<br>
 		<input type="submit" value="register">
