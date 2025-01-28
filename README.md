@@ -6,7 +6,10 @@
 2. Explain Binding Result?
   - In the context of Spring MVC, BindingResult is an interface used to capture and manage the result of validation.
   -  It holds the outcome of binding input data to an object and provides access to validation errors if any constraints are violated.
-
+3. What are the differences between NotNull, NotEmpty and NotBlank annotation?
+   - NotNull: Ensures that the value of the field is not null. Other values (including empty strings, empty collections, or whitespace) are valid.
+   - NotEmpty: Ensures that the value is not null and is not empty. An empty string ("") or an empty collection ([]) is invalid. Whitespace-only strings are valid.
+   - NotBlank: Ensures that the value is not null, not empty, and does not contain only whitespace.
 ## Annotations
 1. Components - create the object and registers that object in Spring IOC container
 2. ComponentScan - Scans the base packages and if Component annotation is found it creates and registers the object in the IOC container
