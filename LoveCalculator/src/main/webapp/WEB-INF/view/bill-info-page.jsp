@@ -9,10 +9,10 @@
 <body align = center>
 	<h3>Payment successful</h3>
 	<br>
-	<h4>Your Full Name : ${billInfo.userName}</h4>
-	<h4>Credit Card Number : ${billInfo.creditCard}</h4>
-	<h4>Amount : ${billInfo.amount}</h4>
-	<h4>Currency : ${billInfo.currency}</h4>
-	<h4>Date : ${billInfo.date}</h4>
+	<h4>Your Full Name : ${billData.userName}</h4>
+	<h4>Credit Card Number : ${billData.creditCard}</h4>
+	<h4>Amount : ${billData.amount}</h4>
+	<h4>Currency : ${billData.currency}</h4>
+	<h4>Date : ${billData.date}</h4>
 </body>
 </html>
