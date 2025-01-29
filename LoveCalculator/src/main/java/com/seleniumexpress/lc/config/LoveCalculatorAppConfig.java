@@ -62,7 +62,7 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer{
 	public void addFormatters(FormatterRegistry registry) {
 		//System.out.println("<------inside the addFormatter method------>");
 		registry.addFormatter(new PhoneNumberFormatter());
-		System.out.println("<------inside the CreditCard addFormatter method------>");
+		
 		registry.addFormatter(new CreditCardFormatter());
 	}
 

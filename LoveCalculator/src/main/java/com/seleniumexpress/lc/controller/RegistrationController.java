@@ -65,6 +65,7 @@ public class RegistrationController {
 		
 		UserNamePropertyEditor userNamePropertyEditor = new UserNamePropertyEditor();
 		binder.registerCustomEditor(String.class,"userName",userNamePropertyEditor);
+		
 	}
 
 }

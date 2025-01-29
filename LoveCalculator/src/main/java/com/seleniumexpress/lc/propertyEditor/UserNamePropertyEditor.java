@@ -8,6 +8,7 @@ public class UserNamePropertyEditor extends PropertyEditorSupport {
 	public void setAsText(String text) throws IllegalArgumentException {
 		 
 		String upperCaseName = text.toUpperCase();
+		System.out.println("userName  " + upperCaseName);
 		setValue(upperCaseName);
 	}
 	
