@@ -30,8 +30,6 @@ public class CreditCardFormatter implements Formatter<CreditCard>{
 			  .map(Integer::parseInt)
 			  .toArray(Integer[]::new);
 		
-		System.out.println(integerArray[0]);
-		
 		// Extract 
 		creditCard.setFirstFourDigits(integerArray[0]);
 		creditCard.setSecoundFourDigits(integerArray[1]);
