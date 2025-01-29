@@ -33,8 +33,8 @@
 		
 		<br>
 		<div>
-			<label>User Name</label>
-			<form:input path="userName"/>
+			<label for="un">User Name</label>
+			<form:input id="un" path="userName"/>
 			<form:errors class="err" path="userName"/>
 		</div>
 		<br>
@@ -46,9 +46,9 @@
 		<div>
 			<label>Country</label>
 			<form:select path="country">
-				<form:option value="aus">Australia</form:option>
-				<form:option value="can">Cananda</form:option>
-				<form:option value="ind">India</form:option>
+				<form:option value="Australia">Australia</form:option>
+				<form:option value="Cananda">Cananda</form:option>
+				<form:option value="India">India</form:option>
 				<form:option value="uk">UK</form:option>
 				<form:option value="usa">USA</form:option>
 			</form:select>

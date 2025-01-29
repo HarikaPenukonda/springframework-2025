@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.seleniumexpress.lc.api.CommunicationDTO;
 import com.seleniumexpress.lc.api.Phone;
 import com.seleniumexpress.lc.api.UserRegistrationDTO;
+import com.seleniumexpress.lc.propertyEditor.UserNamePropertyEditor;
 
 import jakarta.validation.Valid;
 
@@ -61,6 +62,9 @@ public class RegistrationController {
 		// inbuit class to trim white spaces
 		StringTrimmerEditor editor = new StringTrimmerEditor(true);
 		binder.registerCustomEditor(String.class, "userName", editor);
+		
+		UserNamePropertyEditor userNamePropertyEditor = new UserNamePropertyEditor();
+		binder.registerCustomEditor(String.class,"userName",userNamePropertyEditor);
 	}
 
 }
