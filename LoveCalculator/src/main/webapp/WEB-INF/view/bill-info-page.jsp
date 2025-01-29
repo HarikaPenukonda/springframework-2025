@@ -12,7 +12,7 @@
 	<h4>Your Full Name : ${billData.userName}</h4>
 	<h4>Credit Card Number : ${billData.creditCard}</h4>
 	<h4>Amount : ${billData.amount}</h4>
-	<h4>Currency : ${billData.currency}</h4>
+	<h4>Currency : ${billData.currency.getSymbol()}</h4>
 	<h4>Date : ${billData.date}</h4>
 </body>
 </html>
