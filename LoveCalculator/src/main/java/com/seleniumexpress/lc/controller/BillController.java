@@ -29,6 +29,11 @@ public class BillController {
 	public String showBillPage(@ModelAttribute("billData") BillDTO billDTO) {
 		System.out.println("<------inside the showBillPage method------>");
 		
+		CreditCard creditCard = new CreditCard();
+		creditCard.setFourthFourDigits(4444);
+		
+		billDTO.setCreditCard(creditCard);
+		
 		return "my-bill-page";
 	}
 	
