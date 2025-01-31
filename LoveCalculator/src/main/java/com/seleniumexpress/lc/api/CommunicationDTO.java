@@ -5,8 +5,8 @@ import jakarta.validation.Valid;
 
 public class CommunicationDTO {
 	
-	private String email = "myexample@gmail.com";
 	
+	private String email;
 	
 	@Valid
 	private Phone phone;

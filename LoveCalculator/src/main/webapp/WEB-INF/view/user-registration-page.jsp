@@ -80,6 +80,7 @@
 			<h4>Contact Us</h4>
 			<label>Email</label>
 			<form:input path="communicationDTO.email"/> <!-- Nested Object example - getCommunicationDTO().getEmail() -->
+			<form:errors class="err" path="communicationDTO.email"></form:errors>
 		</div>
 		<br>
 		<div>

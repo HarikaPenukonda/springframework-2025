@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.seleniumexpress.lc.Validator.EmailValidator;
 import com.seleniumexpress.lc.Validator.FullNameValidator;
 import com.seleniumexpress.lc.api.CommunicationDTO;
 import com.seleniumexpress.lc.api.Phone;
@@ -70,6 +71,9 @@ public class RegistrationController {
 		
 		// full name not empty validator
 		binder.addValidators(new FullNameValidator());
+		
+		// email not empty validator
+		binder.addValidators(new EmailValidator());
 		
 	}
 
