@@ -1,11 +1,13 @@
 package com.seleniumexpress.lc.Validator;
 
+import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 import com.seleniumexpress.lc.api.UserRegistrationDTO;
 
+@Component
 public class EmailValidator implements Validator {
 
 	@Override
@@ -23,7 +25,7 @@ public class EmailValidator implements Validator {
 		// email domain should be gmail.com
 		String email = ((UserRegistrationDTO)object).getCommunicationDTO().getEmail();
 		
-		if(!email.contains("@gmail.com")) {
+		if(!email.endsWith("@gmail.com")) {
 			errors.rejectValue("communicationDTO.email", "email.invalid_format");
 		}
 	}

@@ -2,6 +2,7 @@ package com.seleniumexpress.lc.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -22,6 +23,9 @@ import jakarta.validation.Valid;
 
 @Controller
 public class RegistrationController {
+	
+	@Autowired
+	private EmailValidator emailValidator;
 	
 	@RequestMapping("/register")
 	public String showRegistrationPage(@ModelAttribute("userReg") UserRegistrationDTO userRegistrationDTO) {
@@ -48,6 +52,9 @@ public class RegistrationController {
 	public String registeredUserInfo(@Valid @ModelAttribute("userReg") UserRegistrationDTO userRegistrationDTO , BindingResult result) {
 		System.out.println("<------inside the registered User information method------>");
 		
+		// calling the validator manually instead of initBinder
+		emailValidator.validate(userRegistrationDTO, result);
+		
 		if(result.hasErrors()) {
 			System.out.println("<------Page has errors------>");
 			List<ObjectError> allErrors = result.getAllErrors();
@@ -73,7 +80,7 @@ public class RegistrationController {
 		binder.addValidators(new FullNameValidator());
 		
 		// email not empty validator
-		binder.addValidators(new EmailValidator());
+		//binder.addValidators(new EmailValidator());
 		
 	}
 
