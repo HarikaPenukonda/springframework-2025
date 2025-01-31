@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.seleniumexpress.lc.api.BillDTO;
+import com.seleniumexpress.lc.api.CreditCard;
+import com.seleniumexpress.lc.formatter.CreditCardFormatter;
+import com.seleniumexpress.lc.propertyEditor.CreditCardEditor;
 import com.seleniumexpress.lc.propertyEditor.CurrencyPropertyEditor;
 
 @Controller
@@ -57,6 +60,13 @@ public class BillController {
 		// Custom curreny editor
 		CurrencyPropertyEditor currencyPropertyEditor = new CurrencyPropertyEditor();
 		dataBinder.registerCustomEditor(Currency.class, "currency", currencyPropertyEditor);
+		
+		// registering formatter
+		dataBinder.addCustomFormatter(new CreditCardFormatter());
+		
+		// CreditCard Editor
+		CreditCardEditor creditCardEditor = new CreditCardEditor();
+		dataBinder.registerCustomEditor(CreditCard.class, "creditCard", creditCardEditor);
 	}
 	
 	
