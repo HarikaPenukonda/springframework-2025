@@ -9,8 +9,8 @@ import jakarta.validation.constraints.Size;
 
 public class UserRegistrationDTO {
 	
-	@NotBlank(message = " * your name should not be blank")
-	@Size(min = 3, max = 15, message = "* your name should be between 3 - 15 characters")
+	//@NotBlank(message = " * your name should not be blank")
+	//@Size(min = 3, max = 15, message = "* your name should be between 3 - 15 characters")
 	private String fullName;
 	
 	@NotEmpty(message = " * username cannot be empty")

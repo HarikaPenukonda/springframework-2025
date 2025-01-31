@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.seleniumexpress.lc.Validator.FullNameValidator;
 import com.seleniumexpress.lc.api.CommunicationDTO;
 import com.seleniumexpress.lc.api.Phone;
 import com.seleniumexpress.lc.api.UserRegistrationDTO;
@@ -63,8 +64,12 @@ public class RegistrationController {
 		StringTrimmerEditor editor = new StringTrimmerEditor(true);
 		binder.registerCustomEditor(String.class, "userName", editor);
 		
+		// change username to uppercase
 		UserNamePropertyEditor userNamePropertyEditor = new UserNamePropertyEditor();
 		binder.registerCustomEditor(String.class,"userName",userNamePropertyEditor);
+		
+		// full name not empty validator
+		binder.addValidators(new FullNameValidator());
 		
 	}
 
