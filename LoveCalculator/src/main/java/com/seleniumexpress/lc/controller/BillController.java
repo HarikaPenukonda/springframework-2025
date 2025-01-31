@@ -62,11 +62,11 @@ public class BillController {
 		dataBinder.registerCustomEditor(Currency.class, "currency", currencyPropertyEditor);
 		
 		// registering formatter
-		dataBinder.addCustomFormatter(new CreditCardFormatter());
+		//dataBinder.addCustomFormatter(new CreditCardFormatter());
 		
 		// CreditCard Editor
-		CreditCardEditor creditCardEditor = new CreditCardEditor();
-		dataBinder.registerCustomEditor(CreditCard.class, "creditCard", creditCardEditor);
+		//CreditCardEditor creditCardEditor = new CreditCardEditor();
+		//dataBinder.registerCustomEditor(CreditCard.class, "creditCard", creditCardEditor);
 	}
 	
 	

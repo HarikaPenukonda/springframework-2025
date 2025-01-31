@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.seleniumexpress.lc.converters.CreditCardConverterStringToObject;
 import com.seleniumexpress.lc.formatter.CreditCardFormatter;
 import com.seleniumexpress.lc.formatter.PhoneNumberFormatter;
 
@@ -64,6 +65,7 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer{
 		registry.addFormatter(new PhoneNumberFormatter());
 		
 		//registry.addFormatter(new CreditCardFormatter());
+		registry.addConverter(new CreditCardConverterStringToObject());
 	}
 
 }

@@ -1,27 +1,20 @@
-package com.seleniumexpress.lc.propertyEditor;
+package com.seleniumexpress.lc.converters;
 
-import java.beans.PropertyEditorSupport;
 import java.util.Arrays;
+
+import org.springframework.core.convert.converter.Converter;
 
 import com.seleniumexpress.lc.api.CreditCard;
 
-public class CreditCardEditor extends PropertyEditorSupport {
-	
-	// returns a string
+public class CreditCardConverterStringToObject implements Converter<String, CreditCard> {
+
 	@Override
-	public String getAsText() {
+	public CreditCard convert(String source) {
 		
-		return "xxxx-xxxx-xxxx-xxxx";
-	}
-
-	// returns an object `creditcard`
-	@Override
-	public void setAsText(String creditCardNumber) throws IllegalArgumentException {
-
 		CreditCard creditCard = new CreditCard();
-		
+
 		// split the credit card number using '-'
-		String[] creditCardArray = creditCardNumber.split("-");
+		String[] creditCardArray = source.split("-");
 
 		// convert String to Integer
 		Integer[] integerArray = Arrays.stream(creditCardArray).map(Integer::parseInt).toArray(Integer[]::new);
@@ -34,6 +27,7 @@ public class CreditCardEditor extends PropertyEditorSupport {
 
 		System.out.println("Credit Card Info " + creditCard);
 
+		return creditCard;
 	}
 
 }
