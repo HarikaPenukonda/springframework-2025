@@ -24,7 +24,7 @@ public class UserRegistrationDTO {
 	
 	private String gender;
 	
-	@Age(lower = 30, upper = 75, message=" your age should be between 30 - 75 ")
+	@Age(lower = 30, upper = 75)
 	private Integer age;
 	
 	@Valid
