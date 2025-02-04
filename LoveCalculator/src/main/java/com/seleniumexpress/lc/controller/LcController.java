@@ -22,21 +22,12 @@ public class LcController {
 	@RequestMapping("/")
 	public String getHomePage(@ModelAttribute("userInfo") UserInfoDTO userInfoDTO, HttpServletRequest request) {
 		
-		Cookie[] cookies = request.getCookies();
-		
-		for (Cookie temp : cookies) {
-			if("lcApp.userName".equals(temp.getName())) {
-				String myUserName = temp.getValue();
-				userInfoDTO.setUserName(myUserName);
-			}
-		}
 		
 		return "home-page";
 	}
 	
 	@RequestMapping("/processhome")
-	public String processHomePage(@Valid @ModelAttribute("userInfo") UserInfoDTO userInfoDTO, BindingResult result,
-			HttpServletResponse response) 
+	public String processHomePage(@Valid @ModelAttribute("userInfo") UserInfoDTO userInfoDTO, BindingResult result) 
 	{	
 		//System.out.println(userInfoDTO.isTermsAndConditions());
 		
@@ -51,12 +42,7 @@ public class LcController {
 			return "home-page";
 		}
 		
-		// Create a cookie to keep track of the username
-		Cookie theCookie = new Cookie("lcApp.userName", userInfoDTO.getUserName());
-		theCookie.setMaxAge(60*60*24);
 		
-		// Add cookie to the response
-		response.addCookie(theCookie);
 		
 		/*
 		 * the @Valid annotation is used to trigger validation for a bean or object

@@ -2,7 +2,6 @@ package com.seleniumexpress.lc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -12,11 +11,11 @@ import com.seleniumexpress.lc.api.EmailDTO;
 public class EmailController {
 	
 	@RequestMapping("/sendemail")
-	public String sendEmail(@CookieValue("lcApp.userName") String userName,Model model) {
+	public String sendEmail(Model model) {
 		
 		
 		model.addAttribute("emailDTO", new EmailDTO());
-		model.addAttribute("userName", userName);
+
 		//model.addAttribute("userName", userName.toUpperCase());
 		return "send-email-page";
 	}
