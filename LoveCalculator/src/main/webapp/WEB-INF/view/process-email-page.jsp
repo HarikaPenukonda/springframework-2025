@@ -8,7 +8,7 @@
 </head>
 <body align = center>
 	<hr> 
-	<h3>Hi ${userName}</h3>
+	<h3>Hi ${userInfo.userName}</h3>
 	<h4>Email successfully sent to ${emailData.userEmail}</h4>
 </body>
 </html>
