@@ -26,7 +26,7 @@ public class LcController {
 	}
 	
 	@RequestMapping("/processhome")
-	public String processHomePage(@Valid @ModelAttribute("userInfo") UserInfoDTO userInfoDTO, BindingResult result, HttpServletRequest request) 
+	public String processHomePage(@Valid @ModelAttribute("userInfo") UserInfoDTO userInfoDTO, BindingResult result) 
 	{	
 		//System.out.println(userInfoDTO.isTermsAndConditions());
 		
@@ -40,11 +40,6 @@ public class LcController {
 			// arguments []; default message [userName]]; default message [username should not be blank]]
 			return "home-page";
 		}
-		
-		// create, manage and register cookie using session
-		HttpSession session = request.getSession();
-		session.setAttribute("userName",userInfoDTO.getUserName());
-		
 		
 		/*
 		 * the @Valid annotation is used to trigger validation for a bean or object
