@@ -6,13 +6,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Send Email</title>
+<style type="text/css">
+.a{
+	font-style: italic;
+	color: red
+}
+
+</style>
 </head>
 <body align = center>
 	<div>
 	<h1>Love Calculator</h1>
 	<hr>
 		<form:form method="GET" action="process-email" modelAttribute="emailDTO">
-		<h4>Hi ,</h4>
+		<h2>Hi <span class=a>${userName},</span></h2>
 		<div>
 			<label>Your Email ID : </label>
 			<form:input path="userEmail"/>

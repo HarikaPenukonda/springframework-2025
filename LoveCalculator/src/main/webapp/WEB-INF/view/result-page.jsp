@@ -19,7 +19,7 @@
 	</div>
 	
 	<br>
-	<h5><a href="/LoveCalculator/sendemail/">send result to email</a></h5>
+	<h5><a href=/LoveCalculator/sendemail>send result to email</a></h5>
 	<h5><a href=#>try with someone else</a></h5>
 	<h5><a href=#>Check user history</a></h5>
 	

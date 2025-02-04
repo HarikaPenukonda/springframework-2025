@@ -18,7 +18,7 @@ public class UserInfoDTO {
 	private boolean termsAndConditions;
 
 	public UserInfoDTO() {
-		System.out.println("UserInfoDTO constructor is called...");
+		//System.out.println("UserInfoDTO constructor is called...");
 	}
 
 	public String getUserName() {
