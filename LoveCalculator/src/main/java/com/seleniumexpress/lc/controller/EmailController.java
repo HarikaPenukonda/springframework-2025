@@ -7,12 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.seleniumexpress.lc.api.EmailDTO;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class EmailController {
 	
 	@RequestMapping("/sendemail")
-	public String sendEmail(Model model) {
+	public String sendEmail(Model model, HttpSession session) {
 		
+		String myUserName = (String) session.getAttribute("userName");
+		model.addAttribute("userName", myUserName.toUpperCase());
 		
 		model.addAttribute("emailDTO", new EmailDTO());
 

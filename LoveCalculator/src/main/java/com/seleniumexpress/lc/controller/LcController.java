@@ -14,20 +14,19 @@ import com.seleniumexpress.lc.api.UserInfoDTO;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
 @Controller
 public class LcController {
 	
 	@RequestMapping("/")
-	public String getHomePage(@ModelAttribute("userInfo") UserInfoDTO userInfoDTO, HttpServletRequest request) {
-		
-		
+	public String getHomePage(@ModelAttribute("userInfo") UserInfoDTO userInfoDTO) {
 		return "home-page";
 	}
 	
 	@RequestMapping("/processhome")
-	public String processHomePage(@Valid @ModelAttribute("userInfo") UserInfoDTO userInfoDTO, BindingResult result) 
+	public String processHomePage(@Valid @ModelAttribute("userInfo") UserInfoDTO userInfoDTO, BindingResult result, HttpServletRequest request) 
 	{	
 		//System.out.println(userInfoDTO.isTermsAndConditions());
 		
@@ -42,6 +41,9 @@ public class LcController {
 			return "home-page";
 		}
 		
+		// create, manage and register cookie using session
+		HttpSession session = request.getSession();
+		session.setAttribute("userName",userInfoDTO.getUserName());
 		
 		
 		/*
