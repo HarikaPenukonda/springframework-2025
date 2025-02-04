@@ -12,7 +12,7 @@
 	<h1>Love Calculator</h1>
 	<hr>
 		<form:form method="GET" action="process-email" modelAttribute="emailDTO">
-		<h4>Hi ${userName},</h4>
+		<h4>Hi ,</h4>
 		<div>
 			<label>Your Email ID : </label>
 			<form:input path="userEmail"/>

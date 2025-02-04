@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.seleniumexpress.lc.api.UserInfoDTO;
 
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 
 @Controller
@@ -22,7 +24,8 @@ public class LcController {
 	}
 	
 	@RequestMapping("/processhome")
-	public String processHomePage(@Valid @ModelAttribute("userInfo") UserInfoDTO userInfoDTO, BindingResult result) 
+	public String processHomePage(@Valid @ModelAttribute("userInfo") UserInfoDTO userInfoDTO, BindingResult result,
+			HttpServletResponse response) 
 	{	
 		//System.out.println(userInfoDTO.isTermsAndConditions());
 		
@@ -36,6 +39,13 @@ public class LcController {
 			// arguments []; default message [userName]]; default message [username should not be blank]]
 			return "home-page";
 		}
+		
+		// Create a cookie to keep track of the username
+		Cookie theCookie = new Cookie("lcApp.userName", userInfoDTO.getUserName());
+		theCookie.setMaxAge(60*60*24);
+		
+		// Add cookie to the response
+		response.addCookie(theCookie);
 		
 		/*
 		 * the @Valid annotation is used to trigger validation for a bean or object
