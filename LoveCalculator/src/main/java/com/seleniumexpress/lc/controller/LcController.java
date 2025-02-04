@@ -3,6 +3,7 @@ package com.seleniumexpress.lc.controller;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -19,11 +20,17 @@ import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
 @Controller
-@SessionAttributes("userInfo")
+@SessionAttributes("userInfo") // stores multiple attributes/objects to the session
 public class LcController {
 	
 	@RequestMapping("/")
-	public String getHomePage(@ModelAttribute("userInfo") UserInfoDTO userInfoDTO) {
+	public String getHomePage(Model model) {
+		
+		// public String getHomePage(@ModelAttribute("userInfo") UserInfoDTO userInfoDTO)
+		// we are telling spring to store userInfoDTO or userInfo model attribute inside the session
+		// Spring will save userInfo, but we need to add userInfo to model manually
+		
+		model.addAttribute("userInfo", new UserInfoDTO()); // adding manually
 		return "home-page";
 	}
 	
