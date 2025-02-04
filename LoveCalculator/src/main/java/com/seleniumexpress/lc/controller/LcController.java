@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.seleniumexpress.lc.api.UserInfoDTO;
 
 import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 
@@ -19,7 +20,17 @@ import jakarta.validation.Valid;
 public class LcController {
 	
 	@RequestMapping("/")
-	public String getHomePage(@ModelAttribute("userInfo") UserInfoDTO userInfoDTO) {
+	public String getHomePage(@ModelAttribute("userInfo") UserInfoDTO userInfoDTO, HttpServletRequest request) {
+		
+		Cookie[] cookies = request.getCookies();
+		
+		for (Cookie temp : cookies) {
+			if("lcApp.userName".equals(temp.getName())) {
+				String myUserName = temp.getValue();
+				userInfoDTO.setUserName(myUserName);
+			}
+		}
+		
 		return "home-page";
 	}
 	
